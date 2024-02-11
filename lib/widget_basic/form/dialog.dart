@@ -41,7 +41,10 @@ class _DialogWidgetState extends State<DialogWidget> {
                           onPressed: () {
                             Navigator.pop(context);
                           },
-                          child: const Text('OK'),
+                          child: const Text(
+                            'OK',
+                            style: TextStyle(color: Colors.white),
+                          ),
                         ),
                       ],
                     );
@@ -52,40 +55,48 @@ class _DialogWidgetState extends State<DialogWidget> {
             ),
             const SizedBox(
               width: 8,
+              height: 16,
             ),
             ElevatedButton(
               onPressed: () async {
                 await showModalBottomSheet<void>(
-                    context: context,
-                    builder: (BuildContext context) {
-                      return Padding(
-                        padding: const EdgeInsets.all(20),
-                        child: SizedBox(
-                          width: MediaQuery.of(context).size.width,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              const Text('Your order was placed'),
-                              const SizedBox(
-                                height: 16,
+                  context: context,
+                  builder: (BuildContext context) {
+                    return Padding(
+                      padding: const EdgeInsets.all(20),
+                      child: SizedBox(
+                        width: MediaQuery.of(context).size.width,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            const Text('Your order was placed'),
+                            const SizedBox(
+                              height: 16,
+                            ),
+                            ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.blue,
                               ),
-                              ElevatedButton(
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.blue,
-                                ),
-                                onPressed: () {
-                                  Navigator.pop(context);
-                                },
-                                child: const Text('OK'),
-                              )
-                            ],
-                          ),
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                              child: const Text(
+                                'OK',
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            )
+                          ],
                         ),
-                      );
-                    });
+                      ),
+                    );
+                  },
+                );
               },
               child: const Text('Open BottomSheet'),
+            ),
+            const SizedBox(
+              height: 16,
             ),
             ElevatedButton(
               onPressed: () async {
@@ -122,25 +133,31 @@ class _DialogWidgetState extends State<DialogWidget> {
                                   children: [
                                     ElevatedButton(
                                       style: ElevatedButton.styleFrom(
-                                        backgroundColor: Colors.grey[600],
+                                        backgroundColor: Colors.redAccent,
                                       ),
                                       onPressed: () {
                                         Navigator.pop(context);
                                       },
-                                      child: const Text('No'),
+                                      child: const Text(
+                                        'No',
+                                        style: TextStyle(color: Colors.white),
+                                      ),
                                     ),
                                     const SizedBox(
                                       height: 10,
                                     ),
                                     ElevatedButton(
                                       style: ElevatedButton.styleFrom(
-                                        backgroundColor: Colors.blueGrey,
+                                        backgroundColor: Colors.blueAccent,
                                       ),
                                       onPressed: () {
                                         confirm = true;
                                         Navigator.pop(context);
                                       },
-                                      child: const Text('Yes'),
+                                      child: const Text(
+                                        'Yes',
+                                        style: TextStyle(color: Colors.white),
+                                      ),
                                     ),
                                   ],
                                 )
@@ -157,6 +174,9 @@ class _DialogWidgetState extends State<DialogWidget> {
                 }
               },
               child: const Text('Open Bottomsheet Confirmation'),
+            ),
+            const SizedBox(
+              height: 16,
             ),
             ElevatedButton(
               onPressed: () {

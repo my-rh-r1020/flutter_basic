@@ -10,6 +10,12 @@ import 'package:flutter_widget_basic/widget_basic/layout/list_view.dart';
 import 'package:flutter_widget_basic/widget_basic/layout/row.dart';
 import 'package:flutter_widget_basic/widget_basic/layout/stack.dart';
 import 'package:flutter_widget_basic/widget_basic/layout/wrap.dart';
+import 'package:flutter_widget_basic/widget_basic/navigation/bottom_navbar.dart';
+import 'package:flutter_widget_basic/widget_basic/navigation/drawer.dart';
+import 'package:flutter_widget_basic/widget_basic/navigation/navigation_pop..dart';
+import 'package:flutter_widget_basic/widget_basic/navigation/navigation_push.dart';
+import 'package:flutter_widget_basic/widget_basic/navigation/sliver.dart';
+import 'package:flutter_widget_basic/widget_basic/navigation/tabbar.dart';
 import 'package:flutter_widget_basic/widget_basic/widget/button.dart';
 import 'package:flutter_widget_basic/widget_basic/widget/circle_avatar.dart';
 import 'package:flutter_widget_basic/widget_basic/widget/container.dart';
@@ -75,6 +81,12 @@ class MyApp extends StatelessWidget {
       // home: const DialogWidget(),
 
       // Navigation
+      home: const BottomNavbarWidget(),
+      // home: const DrawerWidget(),
+      // home: const NavigationPopWidget(),
+      // home: const NavigationPushWidget(),
+      // home: const SliverWidget(),
+      // home: const TabbarWidget(),
     );
   }
 }
